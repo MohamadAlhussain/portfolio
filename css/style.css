@@ -1,0 +1,131 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+/* Flip Animation Styles */
+.flip-container {
+  perspective: 1000px;
+  height: 60px;
+}
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back {
+  transform: rotateY(180deg);
+  color: #ffe6a7; /* Custom dark color */
+}
+
+/* Mobile Skill Items */
+.skill-item-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-custom-tan {
+  background-color: #bb9457;
+}
+.bg-custom-dark {
+  background-color: #432818;
+}
+.bg-custom-olive {
+  background-color: #99582a;
+}
+.bg-custom-cream {
+  background-color: #ffe6a7;
+}
+.bg-custom-half {
+  background: linear-gradient(to right, #bb9457 50%, #99582a 50%);
+}
+.bg-custom-half1 {
+  background: linear-gradient(to right, #99582a 50%, #bb9457 50%);
+}
+
+.text-custom-tan {
+  color: #bb9457;
+}
+.text-custom-dark {
+  color: #432818;
+}
+.text-custom-olive {
+  color: #99582a;
+}
+.text-custom-cream {
+  color: #ffe6a7;
+}
+
+@keyframes title-in {
+  0% {
+    opacity: 0;
+    letter-spacing: -20px;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: normal;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--rotation));
+  }
+  50% {
+    transform: translateY(-30px) rotate(calc(var(--rotation) + 10deg));
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-title-in {
+  animation: title-in 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-float {
+  --rotation: 0deg;
+  animation: float 8s infinite ease-in-out;
+}
+
+.animate-float-delayed {
+  --rotation: 0deg;
+  animation: float 8s infinite ease-in-out 2s;
+}
+
+/* Custom rotation variables */
+.rotate-12 {
+  --rotation: 12deg;
+}
+.rotate-30 {
+  --rotation: 30deg;
+}
+.-rotate-45 {
+  --rotation: -45deg;
+}

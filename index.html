@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A website dedicated to developer and designer Mohamed Alhussain. It presents the resume and projects related to web development."
+    />
+    <meta
+      name="keywords"
+      content="Web Developer, Web Design, Mohamed Alhussain, Web Development"
+    />
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <title>Mohamad Alhussain - Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-custom-cream">
+    <!-- Navbar -->
+    <nav
+      class="flex fixed bottom-0 md:top-0 md:bottom-auto w-full bg-custom-cream justify-center p-4 space-x-4 z-50"
+    >
+      <div class="flex space-x-1 md:space-x-8 font-bold">
+        <button
+          onclick="scrollToSection('home')"
+          class="bg-custom-tan px-6 md:px-12 py-2 rounded-lg shadow-md hover:scale-110 hover:bg-white hover:text-black hover:-rotate-3 duration-700"
+        >
+          Home
+        </button>
+        <button
+          onclick="scrollToSection('about')"
+          class="bg-custom-dark px-6 md:px-12 py-2 rounded-lg shadow-md hover:scale-110 hover:bg-white hover:text-black hover:-rotate-3 duration-700"
+        >
+          About
+        </button>
+        <button
+          onclick="scrollToSection('projects')"
+          class="bg-custom-tan px-4 md:px-12 py-2 rounded-lg shadow-md hover:scale-110 hover:bg-white hover:text-black hover:-rotate-3 duration-700"
+        >
+          Projects
+        </button>
+        <button
+          onclick="scrollToSection('contact')"
+          class="bg-custom-dark px-4 md:px-12 py-2 rounded-lg shadow-md hover:scale-110 hover:bg-white hover:text-black hover:-rotate-3 duration-700"
+        >
+          Contact
+        </button>
+      </div>
+    </nav>
+
+    <!-- Container -->
+    <div
+      id="container"
+      class="flex lg:flex-row flex-col transition-transform duration-700"
+    >
+      <!-- Home Section -->
+      <div
+        id="home"
+        class="section w-screen h-screen flex items-center justify-center bg-custom-tan relative overflow-hidden"
+      >
+        <!-- Geometric Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+          <div
+            class="absolute w-64 h-64 bg-custom-dark -top-32 -left-32 rotate-45 animate-float"
+          ></div>
+          <div
+            class="absolute w-48 h-48 bg-custom-olive top-1/4 -right-24 rotate-12 animate-float-delayed"
+          ></div>
+          <div
+            class="absolute w-72 h-72 border-4 border-[#99582a] bottom-0 -left-40 -rotate-45 animate-float"
+          ></div>
+          <div
+            class="absolute w-40 h-40 border-8 border-[#ffe6a7] -bottom-10 right-32 rotate-30 animate-float-delayed"
+          ></div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="relative z-10 space-y-6 md:space-y-8 text-center p-8">
+          <!-- Animated Title -->
+          <div class="overflow-hidden">
+            <h1
+              class="text-4xl md:text-6xl font-black text-custom-dark opacity-0 animate-title-in"
+            >
+              <span
+                class="inline-block transform hover:skew-x-12 transition-all duration-300"
+                >A</span
+              >
+              <span
+                class="inline-block transform hover:-skew-x-12 transition-all duration-300"
+                >L</span
+              >
+              <span
+                class="inline-block transform hover:translate-y-3 transition-all duration-300"
+                >H</span
+              >
+              <span
+                class="inline-block transform hover:-translate-y-3 transition-all duration-300"
+                >U</span
+              >
+              <span
+                class="inline-block transform hover:rotate-180 transition-all duration-300"
+                >S</span
+              >
+              <span
+                class="inline-block transform hover:scale-125 transition-all duration-300"
+                >S</span
+              >
+              <span
+                class="inline-block transform hover:skew-y-12 transition-all duration-300"
+                >A</span
+              >
+              <span
+                class="inline-block transform hover:-skew-y-12 transition-all duration-300"
+                >I</span
+              >
+              <span
+                class="inline-block transform hover:scale-75 transition-all duration-300"
+                >N</span
+              >
+            </h1>
+          </div>
+
+          <!-- Subtitle -->
+          <div
+            class="text-2xl md:text-3xl font-semibold text-custom-olive px-6 py-2"
+          >
+            Web Developer
+          </div>
+
+          <!-- Hover-Activated Grid -->
+          <div
+            class="group relative grid grid-cols-2 gap-4 w-64 md:w-80 mx-auto transform hover:scale-110 transition-all duration-500"
+          >
+            <!-- Animated Button -->
+            <button
+              onclick="downloadCV()"
+              class="col-span-2 py-3 bg-custom-dark text-custom-cream font-bold relative overflow-hidden transform hover:scale-95 transition-all duration-300"
+            >
+              Download CV
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Section -->
+      <div
+        id="about"
+        class="section w-screen h-screen bg-custom-dark p-5 flex justify-center"
+      >
+        <div
+          class="flex flex-col space-y-8 md:space-y-12 w-11/12 md:w-3/4 max-w-4xl md:mt-20"
+        >
+          <!-- About Me -->
+          <div class="flex flex-col space-y-4">
+            <h1
+              class="text-xl font-bold text-center bg-custom-olive py-1 rounded-lg shadow-md"
+            >
+              About Me
+            </h1>
+            <p class="text-sm md:text-lg text-center leading-relaxed">
+              "Hello, I'm Mohamad Alhussain, a passionate web developer
+              dedicated to turning ideas into innovative digital solutions. I
+              constantly refine my skills in modern web technologies to build
+              responsive, high-performance applications that deliver exceptional
+              user experiences."
+            </p>
+          </div>
+
+          <!-- Skills -->
+          <div class="space-y-4">
+            <h1
+              class="text-xl font-bold text-center bg-custom-olive py-1 rounded-lg shadow-md"
+            >
+              My Skills
+            </h1>
+
+            <!-- Mobile View (Always shows names) -->
+            <div class="md:hidden grid grid-cols-5 gap-3">
+              <!-- Row 1 -->
+              <div class="skill-item-mobile">
+                <i class="devicon-html5-plain text-3xl"></i>
+                <span class="text-xs mt-1">HTML</span>
+              </div>
+              <div class="skill-item-mobile">
+                <i class="devicon-css3-plain text-3xl"></i>
+                <span class="text-xs mt-1">CSS</span>
+              </div>
+              <div class="skill-item-mobile">
+                <i class="devicon-javascript-plain text-3xl"></i>
+                <span class="text-xs mt-1">JS</span>
+              </div>
+              <div class="skill-item-mobile">
+                <i class="devicon-tailwindcss-plain text-3xl"></i>
+                <span class="text-xs mt-1">Tailwind</span>
+              </div>
+              <div class="skill-item-mobile">
+                <i class="devicon-react-original text-3xl"></i>
+                <span class="text-xs mt-1">React</span>
+              </div>
+              <!-- Row 2 -->
+              <div class="skill-item-mobile">
+                <i class="devicon-php-plain text-3xl"></i>
+                <span class="text-xs mt-1">PHP</span>
+              </div>
+              <div class="skill-item-mobile">
+                <i class="devicon-mysql-plain text-3xl"></i>
+                <span class="text-xs mt-1">MySQL</span>
+              </div>
+              <div class="skill-item-mobile">
+                <i class="devicon-mongodb-plain text-3xl"></i>
+                <span class="text-xs mt-1">MongoDB</span>
+              </div>
+              <div class="skill-item-mobile">
+                <i class="devicon-github-plain text-3xl"></i>
+                <span class="text-xs mt-1">GitHub</span>
+              </div>
+              <div class="skill-item-mobile">
+                <i class="devicon-express-original text-3xl"></i>
+                <span class="text-xs mt-1">Express</span>
+              </div>
+            </div>
+
+            <!-- Desktop View (Flip animation) -->
+            <div class="hidden md:grid md:grid-cols-5 gap-4">
+              <!-- HTML -->
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front">
+                    <i class="devicon-html5-plain text-4xl"></i>
+                  </div>
+                  <div class="back">
+                    <span class="text-sm font-medium">HTML5</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CSS -->
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front">
+                    <i class="devicon-css3-plain text-4xl"></i>
+                  </div>
+                  <div class="back">
+                    <span class="text-sm font-medium">CSS3</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- JavaScript -->
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front">
+                    <i class="devicon-javascript-plain text-4xl"></i>
+                  </div>
+                  <div class="back">
+                    <span class="text-sm font-medium">JavaScript</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tailwind -->
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front">
+                    <i class="devicon-tailwindcss-plain text-4xl"></i>
+                  </div>
+                  <div class="back">
+                    <span class="text-sm font-medium">Tailwind</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- React -->
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front">
+                    <i class="devicon-react-original text-4xl"></i>
+                  </div>
+                  <div class="back">
+                    <span class="text-sm font-medium">React</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PHP -->
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front">
+                    <i class="devicon-php-plain text-4xl"></i>
+                  </div>
+                  <div class="back">
+                    <span class="text-sm font-medium">PHP</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- MySQL -->
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front">
+                    <i class="devicon-mysql-plain text-4xl"></i>
+                  </div>
+                  <div class="back">
+                    <span class="text-sm font-medium">MySQL</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- MongoDB -->
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front">
+                    <i class="devicon-mongodb-plain text-4xl"></i>
+                  </div>
+                  <div class="back">
+                    <span class="text-sm font-medium">MongoDB</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- GitHub -->
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front">
+                    <i class="devicon-github-plain text-4xl"></i>
+                  </div>
+                  <div class="back">
+                    <span class="text-sm font-medium">GitHub</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Express -->
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front">
+                    <i class="devicon-express-original text-4xl"></i>
+                  </div>
+                  <div class="back">
+                    <span class="text-sm font-medium">Express</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificates -->
+          <div class="flex flex-col items-center space-y-4">
+            <h1
+              class="text-xl font-bold text-center w-full bg-custom-olive py-1 rounded-lg shadow-md"
+            >
+              Certificates
+            </h1>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 w-full">
+              <div
+                class="bg-custom-cream bg-opacity-50 p-2 rounded text-center"
+              >
+                <p class="text-sm font-medium text-custom-dark">Web Design</p>
+              </div>
+              <div
+                class="bg-custom-cream bg-opacity-50 p-2 rounded text-center"
+              >
+                <p class="text-sm font-medium text-custom-dark">Js Developer</p>
+              </div>
+              <div
+                class="bg-custom-cream bg-opacity-50 p-2 rounded text-center"
+              >
+                <p class="text-sm font-medium text-custom-dark">
+                  PHP Certified
+                </p>
+              </div>
+              <div
+                class="bg-custom-cream bg-opacity-50 p-2 rounded text-center"
+              >
+                <p class="text-sm font-medium text-custom-dark">
+                  React Specialist
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Section -->
+      <div
+        id="projects"
+        class="section w-screen h-screen flex justify-center items-center bg-custom-tan p-4 text-sm"
+      >
+        <div
+          class="grid grid-cols-2 lg:grid-cols-2 gap-2 mb-20 w-full h-3/5 md:h-auto md:w-3/5 md:gap-8 md:mt-20"
+        >
+          <!-- Project 1 - Currency Converter -->
+          <div
+            class="bg-custom-olive md:p-8 rounded-lg shadow-2xl space-y-8 flex flex-col justify-center items-center transform hover:scale-105 hover:-rotate-3 transition-all duration-300"
+          >
+            <h3 class="text-lg font-bold text-custom-dark">
+              Currency Converter
+            </h3>
+            <div class="tech-icons flex space-x-4">
+              <i class="devicon-html5-plain text-3xl"></i>
+              <i class="devicon-css3-plain text-3xl"></i>
+              <i class="devicon-javascript-plain text-3xl"></i>
+            </div>
+            <div class="flex space-x-4">
+              <a
+                href="https://github.com/MohamadAlhussain/currency-converter/tree/master"
+                class="text-sm bg-custom-dark p-2 rounded-lg"
+                target="_blank"
+                >GitHub</a
+              >
+              <a
+                href="projects/CurrencyConverter/"
+                class="bg-custom-dark p-2 rounded-lg"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </div>
+
+          <!-- Project 2 - Snake Game -->
+          <div
+            class="bg-custom-olive md:p-8 rounded-lg shadow-2xl space-y-8 flex flex-col justify-center items-center transform hover:scale-105 hover:rotate-3 transition-all duration-300"
+          >
+            <h3 class="text-lg font-bold text-custom-dark">Snake Game</h3>
+
+            <div class="tech-icons flex space-x-4">
+              <i class="devicon-html5-plain text-3xl"></i>
+              <i class="devicon-css3-plain text-3xl"></i>
+              <i class="devicon-javascript-plain text-3xl"></i>
+            </div>
+            <div class="flex space-x-4">
+              <a
+                href="https://github.com/MohamadAlhussain/snake/tree/master"
+                class="bg-custom-dark p-2 rounded-lg"
+                target="_blank"
+                >GitHub</a
+              >
+              <a
+                href="projects/snake/"
+                class="bg-custom-dark text-custom-cream p-2 rounded-lg"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </div>
+
+          <!-- Project 3 - Expense Tracker -->
+          <div
+            class="bg-custom-olive md:p-8 rounded-lg shadow-2xl space-y-8 flex flex-col justify-center items-center transform hover:scale-105 hover:-rotate-3 transition-all duration-300"
+          >
+            <h3 class="text-lg font-bold text-custom-dark">Expense Tracker</h3>
+
+            <div class="tech-icons flex space-x-4">
+              <i class="devicon-react-original text-3xl"></i>
+              <i class="devicon-html5-plain text-3xl"></i>
+              <i class="devicon-css3-plain text-3xl"></i>
+            </div>
+            <div class="flex space-x-4">
+              <a href="#" class="bg-custom-dark p-2 rounded-lg" target="_blank"
+                >GitHub</a
+              >
+              <a
+                href="projects/expenseTracker/"
+                class="bg-custom-dark text-custom-cream p-2 rounded-lg"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </div>
+
+          <!-- Project 4 - Portfolio -->
+          <div
+            class="bg-custom-olive md:p-8 rounded-lg shadow-2xl space-y-8 flex flex-col justify-center items-center transform hover:scale-105 hover:rotate-3 transition-all duration-300"
+          >
+            <h3 class="text-lg font-bold text-custom-dark">
+              Portfolio Website
+            </h3>
+
+            <div class="tech-icons flex space-x-4">
+              <i class="devicon-tailwindcss-plain text-3xl"></i>
+              <i class="devicon-html5-plain text-3xl"></i>
+              <i class="devicon-javascript-plain text-3xl"></i>
+            </div>
+            <div class="flex space-x-4">
+              <a href="#" class="bg-custom-dark p-2 rounded-lg" target="_blank"
+                >GitHub</a
+              >
+              <a
+                href="https://alhussain.tech/"
+                class="bg-custom-dark text-custom-cream p-2 rounded-lg"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div
+        id="contact"
+        class="section w-screen h-screen flex justify-center items-center bg-custom-dark pb-20 md:pb-2"
+      >
+        <div class="flex flex-col justify-center items-center space-y-10">
+          <h1 class="text-4xl font-bold">Contact Me</h1>
+          <p class="text-lg text-center">
+            Looking to collaborate or have any inquiries? Reach out through any
+            of the following platforms:
+          </p>
+
+          <div class="flex space-x-10">
+            <!-- Email -->
+            <a href="mailto:contact@alhussain.tech" target="_blank">
+              <i
+                class="fa-solid fa-envelope text-5xl text-custom-cream hover:text-black transition duration-300"
+              ></i>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/1234567890" target="_blank">
+              <i
+                class="fa-brands fa-whatsapp text-5xl text-custom-cream hover:text-black transition duration-300"
+              ></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/in/mohamad-alhussain-61a102348/"
+              target="_blank"
+            >
+              <i
+                class="fa-brands fa-linkedin text-5xl text-custom-cream hover:text-black transition duration-300"
+              ></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="hidden md:block fixed bottom-0 w-full bg-custom-cream py-2 z-40"
+    >
+      <div class="text-center">
+        <p class="text-custom-dark text-sm">
+          © 2025 Mohamad Alhussain. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
